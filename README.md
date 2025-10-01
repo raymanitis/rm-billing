@@ -23,3 +23,5 @@ RM-Billing allows organizations, jobs, and players to create, manage, and track 
 2. Add to your `server.cfg`:  
    ```ini
    ensure rm-billing
+### 📷 Preview
+![RM-Billing Preview](https://i.imgur.com/Vw3Xp7r.png)
