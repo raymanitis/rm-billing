@@ -74,10 +74,14 @@ export function UI() {
     };
 
     // NUI Event Handlers
-    useNuiEvent('showUI', (data: { nearbyPlayers?: Array<{ id: number, name: string, distance: number }> }) => {
+    useNuiEvent('showUI', (data: { nearbyPlayers?: Array<{ id: number, name: string, distance: number }>, preselectedPlayerId?: number }) => {
         setVisibility(true);
         if (data.nearbyPlayers) {
             setNearbyPlayers(data.nearbyPlayers);
+        }
+        if (typeof data.preselectedPlayerId === 'number') {
+            setActiveTab('create');
+            setSelectedPlayer(String(data.preselectedPlayerId));
         }
     });
 

@@ -3,6 +3,13 @@ Config = {}
 -- Enable/disable debug prints
 Config.Debug = false
 
+-- Example: "invoice" or false
+Config.Command = "invoice"
+
+-- Enable target-based invoicing. When true, you can target a player
+-- to open the invoice UI with that player preselected (requires ox_target).
+Config.TargetInvoice = true
+
 -- Jobs that can create invoices
 Config.AllowedJobs = {
     'police',
